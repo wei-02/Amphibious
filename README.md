@@ -110,13 +110,23 @@ filetree
 
 ## 对于无人车部分
 
-1.启动gazebo
+1. 启动gazebo
 
     cd ~/amphibious_description
 
     source devel/setup.bash
 
     roslaunch amphibious_decription amphibious.launch
+
+2. 打开无人车遥控
+
+再启动一个终端
+
+    cd ~/amphibious_description
+
+    source devel/setup.bash
+
+    rosrun amphibious_description teleop.py
 
 ### 使用到的框架
 
