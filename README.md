@@ -112,11 +112,11 @@ filetree
 
 1.启动gazebo
 
-  cd ~/amphibious_description
+    cd ~/amphibious_description
 
-  source devel/setup.bash
+    source devel/setup.bash
 
-  roslaunch amphibious_decription amphibious.launch
+    roslaunch amphibious_decription amphibious.launch
 
 ### 使用到的框架
 
