@@ -1,0 +1,8 @@
+prefix=/home/w/amphibious_description/devel
+
+Name: amphibious_description
+Description: Description of amphibious_description
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

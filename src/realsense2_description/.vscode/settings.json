@@ -1,0 +1,13 @@
+{
+    "ros.distro": "noetic",
+    "python.autoComplete.extraPaths": [
+        "/home/w/Fast-Drone-250/devel/lib/python3/dist-packages",
+        "/home/w/realsense_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/w/Fast-Drone-250/devel/lib/python3/dist-packages",
+        "/home/w/realsense_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

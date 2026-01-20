@@ -1,0 +1,536 @@
+<sdf version='1.7'>
+  <model name='amphibious'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.002706 -0.000778 -0.003897 0 -0 0</pose>
+        <mass>1.01736</mass>
+        <inertia>
+          <ixx>0.00653956</ixx>
+          <ixy>-0.000145473</ixy>
+          <ixz>-0.000147199</ixz>
+          <iyy>0.0155666</iyy>
+          <iyz>4.67329e-06</iyz>
+          <izz>0.0202676</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_left_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.15948 0.1565 0.073247 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>back_left_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_left_link'>
+      <pose relative_to='back_left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-7e-06 1e-06 -0.004377 0 -0 0</pose>
+        <mass>0.027672</mass>
+        <inertia>
+          <ixx>5.4819e-05</ixx>
+          <ixy>-5.44839e-09</ixy>
+          <ixz>-1.25899e-10</ixz>
+          <iyy>5.48342e-05</iyy>
+          <iyz>-1.12984e-09</iyz>
+          <izz>0.000108805</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_left_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/back_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_left_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/back_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_right_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.15948 -0.1565 0.073247 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>back_right_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_right_link'>
+      <pose relative_to='back_right_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>1e-06 -8e-06 -0.004377 0 -0 0</pose>
+        <mass>0.027671</mass>
+        <inertia>
+          <ixx>5.48346e-05</ixx>
+          <ixy>-6.08259e-09</ixy>
+          <ixz>7.08963e-10</ixz>
+          <iyy>5.48164e-05</iyy>
+          <iyz>9.20538e-11</iyz>
+          <izz>0.000108803</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_right_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/back_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_right_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/back_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_left_joint' type='revolute'>
+      <pose relative_to='base_link'>0.15948 0.1565 0.073247 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>front_left_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_left_link'>
+      <pose relative_to='front_left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>1e-06 -8e-06 -0.004377 0 -0 0</pose>
+        <mass>0.027671</mass>
+        <inertia>
+          <ixx>5.48346e-05</ixx>
+          <ixy>-6.08258e-09</ixy>
+          <ixz>7.08959e-10</ixz>
+          <iyy>5.48164e-05</iyy>
+          <iyz>9.20463e-11</iyz>
+          <izz>0.000108803</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_left_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/front_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_left_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/front_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_right_joint' type='revolute'>
+      <pose relative_to='base_link'>0.15948 -0.1565 0.073247 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>front_right_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_right_link'>
+      <pose relative_to='front_right_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-5e-06 -3e-06 -0.004377 0 -0 0</pose>
+        <mass>0.0276723</mass>
+        <inertia>
+          <ixx>5.48281e-05</ixx>
+          <ixy>2.83473e-10</ixy>
+          <ixz>-6.4647e-10</ixz>
+          <iyy>5.48487e-05</iyy>
+          <iyz>-4.76682e-10</iyz>
+          <izz>0.000108829</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_right_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/front_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_right_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/front_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='left_joint' type='revolute'>
+      <pose relative_to='base_link'>0 0.153 -0.00752 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>left_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>1.57</upper>
+          <effort>50</effort>
+          <velocity>2</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>0.5</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='left_link'>
+      <pose relative_to='left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.001432 0.007916 -0.098678 0 -0 0</pose>
+        <mass>0.396662</mass>
+        <inertia>
+          <ixx>0.000671694</ixx>
+          <ixy>1.20096e-05</ixy>
+          <ixz>4.60044e-06</ixz>
+          <iyy>0.0131366</iyy>
+          <iyz>3.64877e-05</iyz>
+          <izz>0.0126848</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='left_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_left_wheel_joint' type='revolute'>
+      <pose relative_to='left_link'>-0.20016 0.019 -0.1364 0 -0 0</pose>
+      <parent>left_link</parent>
+      <child>back_left_wheel_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_left_wheel_link'>
+      <pose relative_to='back_left_wheel_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.0274732</mass>
+        <inertia>
+          <ixx>4.26236e-06</ixx>
+          <ixy>-3.12931e-21</ixy>
+          <ixz>1.93905e-22</ixz>
+          <iyy>6.69317e-06</iyy>
+          <iyz>2.02328e-20</iyz>
+          <izz>4.26236e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_left_wheel_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/back_left_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_left_wheel_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/back_left_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_left_wheel_joint' type='revolute'>
+      <pose relative_to='left_link'>0.20016 0.019 -0.1364 0 -0 0</pose>
+      <parent>left_link</parent>
+      <child>front_left_wheel_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_left_wheel_link'>
+      <pose relative_to='front_left_wheel_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.0274732</mass>
+        <inertia>
+          <ixx>4.26236e-06</ixx>
+          <ixy>-3.12931e-21</ixy>
+          <ixz>1.93905e-22</ixz>
+          <iyy>6.69317e-06</iyy>
+          <iyz>2.02328e-20</iyz>
+          <izz>4.26236e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_left_wheel_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/front_left_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_left_wheel_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/front_left_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='right_joint' type='revolute'>
+      <pose relative_to='base_link'>0 -0.153 -0.0075 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>right_link</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>1.57</upper>
+          <effort>50</effort>
+          <velocity>2</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+          <friction>0.5</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='right_link'>
+      <pose relative_to='right_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.001431 -0.007916 -0.098678 0 -0 0</pose>
+        <mass>0.396663</mass>
+        <inertia>
+          <ixx>0.000671698</ixx>
+          <ixy>-1.20125e-05</ixy>
+          <ixz>4.60027e-06</ixz>
+          <iyy>0.0131367</iyy>
+          <iyz>-3.64883e-05</iyz>
+          <izz>0.0126848</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='right_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_right_wheel_joint' type='revolute'>
+      <pose relative_to='right_link'>-0.20016 -0.019 -0.1364 0 -0 0</pose>
+      <parent>right_link</parent>
+      <child>back_right_wheel_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>0</effort>
+          <velocity>0</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_right_wheel_link'>
+      <pose relative_to='back_right_wheel_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0 0 0 -0 0</pose>
+        <mass>0.0274732</mass>
+        <inertia>
+          <ixx>4.26236e-06</ixx>
+          <ixy>-1.0693e-22</ixy>
+          <ixz>-1.80007e-22</ixz>
+          <iyy>6.69317e-06</iyy>
+          <iyz>-2.03275e-20</iyz>
+          <izz>4.26236e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_right_wheel_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/back_right_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_right_wheel_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/back_right_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_right_wheel_joint' type='revolute'>
+      <pose relative_to='right_link'>0.20016 -0.019 -0.1364 0 -0 0</pose>
+      <parent>right_link</parent>
+      <child>front_right_wheel_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_right_wheel_link'>
+      <pose relative_to='front_right_wheel_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0 0 0 -0 0</pose>
+        <mass>0.0274732</mass>
+        <inertia>
+          <ixx>4.26236e-06</ixx>
+          <ixy>-1.99852e-23</ixy>
+          <ixz>1.34942e-22</ixz>
+          <iyy>6.69317e-06</iyy>
+          <iyz>-2.03027e-20</iyz>
+          <izz>4.26236e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_right_wheel_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/front_right_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_right_wheel_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://amphibious_description/meshes/front_right_wheel_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

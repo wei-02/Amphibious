@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="amphibious">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00270590411977915 -0.000777804279113158 -0.0038969069995069"
+        rpy="0 0 0" />
+      <mass
+        value="1.01735652605602" />
+      <inertia
+        ixx="0.00653955544069661"
+        ixy="-0.000145472575179364"
+        ixz="-0.000147199308938309"
+        iyy="0.0155666368669926"
+        iyz="4.67328671519751E-06"
+        izz="0.0202675932630787" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_link">
+    <inertial>
+      <origin
+        xyz="1.29093144882186E-06 -8.00972545067502E-06 -0.00437727561682061"
+        rpy="0 0 0" />
+      <mass
+        value="0.0276709889657561" />
+      <inertia
+        ixx="5.48345801850678E-05"
+        ixy="-6.08257931774842E-09"
+        ixz="7.08958707724225E-10"
+        iyy="5.48163551972365E-05"
+        iyz="9.20463476615314E-11"
+        izz="0.000108803106386462" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/front_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.15948 0.1565 0.073247"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_right_link">
+    <inertial>
+      <origin
+        xyz="-5.14354515876447E-06 -3.32573533587399E-06 -0.00437715492996982"
+        rpy="0 0 0" />
+      <mass
+        value="0.0276722597367738" />
+      <inertia
+        ixx="5.48280876964765E-05"
+        ixy="2.83473180548925E-10"
+        ixz="-6.46469716944244E-10"
+        iyy="5.48486786099491E-05"
+        iyz="-4.76681622683081E-10"
+        izz="0.000108828865361431" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/front_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/front_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.15948 -0.1565 0.073247"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="back_left_link">
+    <inertial>
+      <origin
+        xyz="-6.98179041319635E-06 8.7129631942684E-07 -0.00437713650333883"
+        rpy="0 0 0" />
+      <mass
+        value="0.0276720462761253" />
+      <inertia
+        ixx="5.48190460860862E-05"
+        ixy="-5.44839360988142E-09"
+        ixz="-1.25899374765416E-10"
+        iyy="5.48342362711538E-05"
+        iyz="-1.12983641712843E-09"
+        izz="0.000108805406639433" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/back_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/back_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.15948 0.1565 0.073247"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="back_right_link">
+    <inertial>
+      <origin
+        xyz="1.29087842759557E-06 -8.00961504293651E-06 -0.004377275682482"
+        rpy="0 0 0" />
+      <mass
+        value="0.0276709887521579" />
+      <inertia
+        ixx="5.48345801527662E-05"
+        ixy="-6.08258501359831E-09"
+        ixz="7.0896261189936E-10"
+        iyy="5.48163551789338E-05"
+        iyz="9.20538267663622E-11"
+        izz="0.000108803106339897" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/back_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/back_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.15948 -0.1565 0.073247"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_link">
+    <inertial>
+      <origin
+        xyz="-0.00143154372335368 0.0079156961985527 -0.098678446334195"
+        rpy="0 0 0" />
+      <mass
+        value="0.396661536197525" />
+      <inertia
+        ixx="0.000671694166975538"
+        ixy="1.20096218347438E-05"
+        ixz="4.60043959091728E-06"
+        iyy="0.0131366492933799"
+        iyz="3.64876942890667E-05"
+        izz="0.0126847585426908" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.153 -0.00752"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="50"
+      velocity="2.0" />
+    <dynamics damping="1.0" friction="0.5" />
+  </joint>
+  <link
+    name="front_left_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274732277556427" />
+      <inertia
+        ixx="4.26235681450565E-06"
+        ixy="-3.12930917762062E-21"
+        ixz="1.93904921925967E-22"
+        iyy="6.69316511196846E-06"
+        iyz="2.02328090369897E-20"
+        izz="4.26235681450565E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/front_left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/front_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.20016 0.019 -0.1364"
+      rpy="0 0 0" />
+    <parent
+      link="left_link" />
+    <child
+      link="front_left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="back_left_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274732277556427" />
+      <inertia
+        ixx="4.26235681450565E-06"
+        ixy="-3.12930917762062E-21"
+        ixz="1.93904921925967E-22"
+        iyy="6.69316511196846E-06"
+        iyz="2.02328090369897E-20"
+        izz="4.26235681450565E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/back_left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/back_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.20016 0.019 -0.1364"
+      rpy="0 0 0" />
+    <parent
+      link="left_link" />
+    <child
+      link="back_left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_link">
+    <inertial>
+      <origin
+        xyz="-0.00143084446196562 -0.00791565004548878 -0.0986782813020985"
+        rpy="0 0 0" />
+      <mass
+        value="0.396663325676347" />
+      <inertia
+        ixx="0.000671697583830792"
+        ixy="-1.20124794224642E-05"
+        ixz="4.60026615978317E-06"
+        iyy="0.0131366807952159"
+        iyz="-3.64882645287992E-05"
+        izz="0.0126847868322065" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.153 -0.0075"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="1.57"
+      effort="50"
+      velocity="2.0" />
+    <dynamics damping="1.0" friction="0.5" />
+  </joint>
+  <link
+    name="front_right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -2.77555756156289E-17 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274732277556427" />
+      <inertia
+        ixx="4.26235681450565E-06"
+        ixy="-1.99851656831276E-23"
+        ixz="1.34942453887426E-22"
+        iyy="6.69316511196846E-06"
+        iyz="-2.03026791254472E-20"
+        izz="4.26235681450565E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/front_right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/front_right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.20016 -0.019 -0.1364"
+      rpy="0 0 0" />
+    <parent
+      link="right_link" />
+    <child
+      link="front_right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="back_right_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 -2.77555756156289E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0274732277556427" />
+      <inertia
+        ixx="4.26235681450565E-06"
+        ixy="-1.06929631320073E-22"
+        ixz="-1.80006564342138E-22"
+        iyy="6.69316511196846E-06"
+        iyz="-2.03275287827747E-20"
+        izz="4.26235681450565E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/back_right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amphibious_description/meshes/back_right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.20016 -0.019 -0.1364"
+      rpy="0 0 0" />
+    <parent
+      link="right_link" />
+    <child
+      link="back_right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+ 
+</robot>

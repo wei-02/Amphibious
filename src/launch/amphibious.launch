@@ -1,0 +1,54 @@
+<launch>
+  <!-- Start Gazebo with an empty world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="worlds/empty.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <!--无人机的起点放置位置-->
+    <arg name="x_pos" default="0"/>
+    <arg name="y_pos" default="0"/>
+    <arg name="z_pos" default="0.1"/>
+    <arg name="R_pos" default="0"/>
+    <arg name="P_pos" default="0"/>
+    <arg name="Y_pos" default="0"/>
+  <!-- Optionally enable RealSense D435i in the xacro -->
+  <!-- NOTE: set default to false to avoid xacro failing when realsense2_description is not installed. -->
+  <!-- To enable the camera, either install the package or pass use_d435i:=true on the roslaunch command line. -->
+  <arg name="use_d435i" default="false"/>
+    <arg name="use_nominal_extrinsics" default="true"/>
+    
+  <!-- Load robot description to parameter server -->
+  <!-- <param name="robot_description" textfile="$(find amphibious_description)/urdf/amphibious.urdf" /> -->
+  <param name="robot_description"
+    command="$(find xacro)/xacro '$(find amphibious_description)/urdf/amphibious.xacro' 
+    use_d435i:=$(arg use_d435i) use_nominal_extrinsics:=$(arg use_nominal_extrinsics)" />
+    
+  <!-- Static transform publisher for base_footprint -->
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+    
+  <!-- Spawn the robot model -->
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-urdf -model amphibious -param robot_description -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) 
+            -R $(arg R_pos) -P $(arg P_pos) -Y $(arg Y_pos)"
+    output="screen" 
+    respawn="false" />
+    
+ 
+  <!-- ros_control racecar launch file -->
+  <include file="$(find amphibious_description)/launch/control.launch">
+  </include>
+
+  
+</launch>
